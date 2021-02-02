@@ -1,0 +1,29 @@
+<h1>Start Up Details :</h1>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Details</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Type</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="startupDetails && startupDetails.length>0">
+          <tr *ngFor="let details of startupDetails; index as idx">
+            <th scope="row">
+                <a routerLink="/startupInfo/{{idx}}" >More Details</a>
+            </th>
+            <td>{{details[0]}}</td>
+            <td>{{details[1]}}</td>
+            <td>{{details[2]}}</td>
+            <td>{{details[3]}}</td>
+            <td>{{details[6]}}</td>
+          </tr>
+        </tbody>
+
+    </table>
+  <div *ngIf="!startupDetails">Please wait while the data loads</div>
+  </div>

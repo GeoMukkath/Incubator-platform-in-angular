@@ -1,0 +1,205 @@
+.form-group{
+    width: 300px;
+}
+
+h1{
+    text-align: center;
+}
+#t2name{
+    position: absolute;
+    top: 50px;
+    left:350px;
+    width: 300px;
+}
+
+#incase{
+    text-decoration: none;
+}
+
+#t2phn{
+    position: absolute;
+    top: 100px;
+    left:350px;
+    width: 300px;
+}
+
+#t2mail{
+    position: absolute;
+    top: 150px;
+    left:350px;
+    width: 300px;
+}
+
+#increason{
+    height: 100px;
+    width: 400px;
+}
+
+#idea{
+    height: 100px;
+    width: 400px;
+}
+
+#ques1{
+    height: 100px;
+    width: 400px;
+}
+
+#ques2{
+    height: 100px;
+    width: 400px;
+}
+
+#ques3{
+    height: 100px;
+    width: 400px;
+}
+
+input[type=text]{
+    border: 1px solid orange;
+}
+
+
+input[type=tel]{
+    border: 1px solid orange;
+}
+
+
+input[type=email]{
+    border: 1px solid orange;
+}
+
+textarea{
+    border: 1px solid orange;
+}
+
+select{
+    border: 1px solid orange;
+}
+
+#recorded{
+    overflow-x:hidden;
+    overflow-y:hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    font:helvetica;
+}
+img{
+    overflow:hidden;
+    height: 500px;
+    width:700px;
+    position:asbolute;
+    top: 100px;
+    align-content: center;
+    left: 50px;
+}
+
+#homeb{
+    height: 50px;
+    width: 100px;
+    background-color: blue;
+    color: whitesmoke;
+}
+
+h2{
+    color:#5C80BC;
+}
+h5{
+    color: #5C80BC;
+}
+#oform{
+    border: 1px solid lightblue;
+    width: 500px;
+    height:490px;
+    top: 80px;
+    left: 120px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -1px 31px -16px rgba(0,0,0,0.75);
+}
+
+#tform{
+    border: 1px solid lightblue;
+    width: 1100px;
+    height: 260px;
+    top: 600px;
+    left: 120px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -1px 31px -16px rgba(0,0,0,0.75);
+
+}
+
+#iform{
+    border: 1px solid lightblue;
+    width: 500px;
+    height: 260px;
+    top:900px;
+    left: 130px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -1px 31px -16px rgba(0,0,0,0.75);
+}
+
+#sform{
+    border: 1px solid lightblue;
+    width: 550px;
+    height: 500px;
+    top:900px;
+    right: 120px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -1px 31px -16px rgba(0,0,0,0.75);
+}
+
+#qform{
+    border: 1px solid lightblue;
+    width: 500px;
+    height: 500px;
+    top:1200px;
+    left: 130px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -1px 31px -16px rgba(0,0,0,0.75);
+}
+
+#rules{
+    border: 1px solid lightblue;
+    width: 500px;
+    height: 450px;
+    top:100px;
+    right: 130px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -1px 31px -16px rgba(0,0,0,0.75);
+}
+#bform{
+    right: 260px;
+    position: absolute;
+    top:1500px;
+    height: 100px;
+    width: 300px;
+    font-size: 50px;
+    background-color: blue;
+}
+
+#getback{
+    text-align: center;
+    font-size: 17px;
+    position: absolute;
+    top: 50px;
+    left:120px;
+}
+
+h6{
+    text-decoration: underline;
+}
+

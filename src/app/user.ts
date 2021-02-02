@@ -1,0 +1,30 @@
+export class User {
+    constructor(
+        public fname: string,
+        public lname: string,
+        public mail: string,
+        public phone: number,
+        public address: string,
+        public ages : string,
+        public work : string,
+        public m1fname: string,
+        public m1phone: number,
+        public m1mail: string,
+        public m2fname : string,
+        public m2phone : number,
+        public m2mail : string,
+        public iname :string,
+        public ireason: string,
+        public stname: string,
+        public tsize: string,
+        public ttype: string,
+        public sidea: string,
+        public ment : boolean,
+        public fund: boolean,
+        public space : boolean,
+        public problem: string,
+        public client : string,
+        public compt: string,
+        public usp: string
+    ){}
+}

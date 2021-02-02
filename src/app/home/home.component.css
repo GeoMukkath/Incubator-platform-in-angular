@@ -1,0 +1,84 @@
+body{
+    overflow-y: hidden;
+    margin:0;
+    padding:0;
+}
+#box{
+    height: 80px;
+    width: 200px;
+    border: 4px solid #2A1E5C;
+    position: absolute;
+    left: 550px;
+    top: 250px;
+}
+
+#box:hover{
+    background-color: #2A1E5C;
+    cursor:pointer;
+}
+
+a{
+    position: relative;
+    left: 27%;
+    top: 20%;
+    font-size: 30px;
+    color: orange;
+    font-weight: bold;
+}
+
+a:hover{
+    color: yellow;
+    text-decoration:none;
+}
+
+h4{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+#footer{
+    width: 100%;
+    height: 60px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0px;
+}
+
+h1{
+    font-size: 80px;
+    color: #F0A202;
+}
+
+video{
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    z-index: -1;
+    right: 3px;
+    bottom: 0px;
+}
+
+#links{
+    align-items: left;
+    left: -350px;
+    position: relative;
+    color: black;
+    top: 20px;
+}
+
+#links a {
+    color: black;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+button{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+}

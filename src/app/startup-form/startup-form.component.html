@@ -1,0 +1,196 @@
+<div *ngIf="!submitFlag" class="container-fluid">
+    <h1>Incubation application form</h1>
+    <h2 id="getback">Fill up the form and we will get back to you asap.</h2>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="container" id="oform">
+        <br>
+      <h2>Founder</h2>
+    <div class="form-group">
+    <input type="text" id="fname" required #fname="ngModel" placeholder="Enter first name" class="form-control is-invalid" [class.is-invalid]="fname.invalid && fname.touched" name="fname" [(ngModel)]="userModel.fname">
+    <small class="text-danger" [class.d-none]="fname.valid || fname.untouched">First name is required.</small>
+    </div>
+    
+    <div class="form-group">
+    <input type="text" id="lname" required #lname="ngModel" placeholder="Enter second name" class="form-control" [class.is-invalid]="lname.invalid && lname.touched" name="lname" [(ngModel)]="userModel.lname">
+    <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">Second name is required.</small>
+    </div>
+
+    
+    <div class="form-group">
+     <input type="email" id="mail" required #mail="ngModel" placeholder="Enter your email" class="form-control" [class.is-invalid]="mail.invalid && mail.touched" name="mail" [(ngModel)]="userModel.mail">
+     <small class="text-danger" [class.d-none]="mail.valid || mail.untouched">Mail name is required.</small>
+    </div>
+    
+    <div class="form-group">
+    <input type="tel" id="phn" placeholder="Enter your phone no." #phone="ngModel" pattern="^\d{10}$" [class.is-invalid]="phone.invalid && phone.touched" class="form-control" name="phone" [(ngModel)]="userModel.phone">
+    <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone is required and must be 10 digits long</small>
+    </div>
+    
+    
+    <div class="form-group">
+      <input type="text" id="residence" required #address="ngModel" placeholder="Enter your city" class="form-control" [class.is-invalid]="address.invalid && address.touched" name="address" [(ngModel)]="userModel.address">
+      <small class="text-danger" [class.d-none]="address.valid || address.untouched">First name is required.</small>
+    
+    </div>
+    
+    <div class="form-group">
+      <select class="custom-select" name="ages" required #ages="ngModel" [class.is-invalid]="ages.invalid && ages.touched"  [(ngModel)]="userModel.ages">
+        <option value="">age</option>
+        <option *ngFor="let ag of age">{{ ag }}</option>
+      </select>
+      <small class="text-danger" [class.d-none]="ages.valid || ages.untouched">Age must be mentioned</small>
+    </div>
+    
+    <h5>Who are you ?</h5>
+    <div class="mb-3">
+    <div class="form-check">
+      <input class="form-check-input" type="radio"  value="Student" name="work" [(ngModel)]="userModel.work">
+      <label class="form-check-label">Student</label>
+    </div>
+    
+    <div class="form-check">
+      <input class="form-check-input" type="radio"  value="Employee" name="work" [(ngModel)]="userModel.work">
+      <label class="form-check-label">Employee</label>
+    </div>
+    </div>
+
+    </div>
+    <br>
+    <div class="container" id="rules">
+      <br>
+<h6>Eligibility Criteria for Startup Recognition:</h6><br>
+a. The Startup should be incorporated as a private limited company or registered as a partnership firm or a <br>limited liability partnership
+<br><br>
+b. Turnover should be less than INR 100 Crores in any of the previous financial years
+<br><br>
+c. An entity shall be considered as a startup up to 10 years from the date of its incorporation
+<br><br>
+d. The Startup should be working towards innovation/ improvement of existing products, services and processes and should have the potential to generate employment/ create wealth. An entity formed by splitting up or reconsutrctuon of an existing business shall not be considered a "Startup"
+    </div>
+    <div class="container" id="tform">
+    <h2>Team details</h2>
+    <div class="form-group">
+      <input type="text" id="t1name" required #m1fname="ngModel" placeholder="Enter member 1 full name" class="form-control" name="m1fname" [class.is-invalid]="m1fname.invalid && m1fname.touched" [(ngModel)]="userModel.m1fname">
+      <small class="text-danger" [class.d-none]="m1fname.valid || m1fname.untouched">Full name is required.</small>  
+    </div>
+      
+      <div class="form-group">
+        <input type="tel" id="t1phn" required #m1phone="ngModel" pattern="^\d{10}$" placeholder="Enter your phone no." class="form-control" name="m1phone" [class.is-invalid]="m1phone.invalid && m1phone.touched" [(ngModel)]="userModel.m1phone">
+        <small class="text-danger" [class.d-none]="m1phone.valid || m1phone.untouched">Phone number is required and must be 10 digits long.</small>
+      </div>
+    
+    <div class="form-group">
+       <input type="email" id="t1mail" required #m1mail="ngModel" placeholder="Enter your email" class="form-control" name="m1mail" [class.is-invalid]="m1mail.invalid && m1mail.touched" [(ngModel)]="userModel.m1mail">
+       <small class="text-danger" [class.d-none]="m1mail.valid || m1mail.untouched">Mail is required.</small>
+    </div>
+    
+    <div class="form-group">
+      <input type="text" id="t2name" required #m2fname="ngModel" placeholder="Enter member 2 full name" class="form-control" name="m2fname" [class.is-invalid]="m2fname.invalid && m2fname.touched" [(ngModel)]="userModel.m2fname">
+      <small class="text-danger" [class.d-none]="m2fname.valid || m2fname.untouched">Full name is required.</small>
+    </div>
+      
+    <div class="form-group">
+        <input type="tel" id="t2phn" required #m2phone="ngModel" pattern="^\d{10}$" placeholder="Enter your phone no." class="form-control" name="m2phone" [class.is-invalid]="m2phone.invalid && m2phone.touched" [(ngModel)]="userModel.m2phone">
+        <small class="text-danger" [class.d-none]="m2phone.valid || m2phone.untouched">Phone number is required and must be 10 digits long.</small>
+      </div>
+    
+    <div class="form-group">
+       <input type="email" id="t2mail" required #m2mail="ngModel" placeholder="Enter your email" class="form-control" name="m2mail" [class.is-invalid]="m2mail.invalid && m2mail.touched" [(ngModel)]="userModel.m2mail">
+       <small class="text-danger" [class.d-none]="m2mail.valid || m2mail.untouched">Mail is required.</small>
+    </div>
+    </div>
+
+    <div class="container" id="iform">
+    <h2>Incubator details</h2>
+    <h6 id="incase">Incase the start-up is already incubated</h6>
+    
+    <div class="form-group">
+      <input type="text" id="incname" #iname="ngModel" placeholder="Enter Incubator name" class="form-control" name="iname" [class.is-invalid]="iname.invalid && iname.touched" [(ngModel)]="userModel.iname">
+    </div>
+    
+    <div class="form-group">
+      <textarea class="form-control" rows="5" #ireason="ngModel" placeholder="State reason in breif why you want to leave your current incubator" id="increason" name="ireason" [class.is-invalid]="ireason.invalid && ireason.touched" [(ngModel)]="userModel.ireason"></textarea>
+    </div>
+    </div>
+
+    <div class="container" id="sform">
+    <h2>Start-up details</h2>
+    
+    <div class="form-group">
+      <input type="text" id="sname" required #stname="ngModel" placeholder="Enter start-up name" class="form-control" name="stname" [class.is-invalid]="stname.invalid && stname.touched" [(ngModel)]="userModel.stname">
+      <small class="text-danger" [class.d-none]="stname.valid || stname.untouched">Start-up name is required</small>
+    </div>
+    
+    <div class="form-group">
+      <select class="custom-select" required #tsize="ngModel"  name="tsize" [class.is-invalid]="tsize.invalid && tsize.touched" [(ngModel)]="userModel.tsize">
+        <option value="">Team Size</option>
+        <option *ngFor="let sz of size">{{ sz }}</option>
+      </select>
+      <small class="text-danger" [class.d-none]="tsize.valid || tsize.untouched">Size must be entered</small>
+    </div>
+    
+    <div class="form-group">
+      <select class="custom-select" required #ttype="ngModel"  name="ttype" [class.is-invalid]="ttype.invalid && ttype.touched" [(ngModel)]="userModel.ttype">
+        <option value="">Type of start-up</option>
+        <option *ngFor="let ty of type">{{ ty }}</option>
+      </select>
+      <small class="text-danger" [class.d-none]="ttype.valid || ttype.untouched">Type of start-up is mandatory</small>
+    </div>
+    
+    <div class="form-group">
+      <textarea class="form-control" required #sidea="ngModel" rows="5" placeholder="Enter the idea of your start-up in breif" id="idea" name="sidea" [class.is-invalid]="sidea.invalid && sidea.touched" [(ngModel)]="userModel.sidea"></textarea>
+      <small class="text-danger" [class.d-none]="sidea.valid || sidea.untouched">Description is mandatory</small>
+    </div>
+    <h5>What kind of help do you expect from us?</h5>
+    
+    <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" name="ment" [(ngModel)]="userModel.ment">
+    <label class="form-check-label"> Mentorship</label>
+    </div>
+    
+    
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" name="fund" [(ngModel)]="userModel.fund">
+      <label class="form-check-label"> Funding</label>
+      </div>
+    
+      
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" name="space" [(ngModel)]="userModel.space">
+      <label class="form-check-label"> Office space</label>
+      </div>
+    </div>
+    <div class="container" id="qform">
+    <h2>A few questions</h2>
+    
+    <div class="form-group">
+      <textarea class="form-control" required #problem="ngModel" rows="5" placeholder="What problem does your potential start-up solve and what would be the start-up’s
+      impact ?" id="ques1" name="problem" [class.is-invalid]="problem.invalid && problem.touched" [(ngModel)]="userModel.problem"></textarea>
+      <small class="text-danger" [class.d-none]="problem.valid || problem.untouched">You cannot leave your problem statement vacant</small>
+    </div>
+    
+    <div class="form-group">
+      <textarea class="form-control" required #client="ngModel" rows="5" placeholder="Who is your target customer/client and what issues are they facing?" id="ques2" name="client" [class.is-invalid]="client.invalid && client.touched" [(ngModel)]="userModel.client"></textarea>
+      <small class="text-danger" [class.d-none]="client.valid || client.untouched">Client information is required</small>
+    </div>
+    
+    <div class="form-group">
+      <input type="text" id="key" required #key="ngModel" placeholder="Who is your key competitor? " class="form-control" name="compt" [class.is-invalid]="key.invalid && key.touched" [(ngModel)]="userModel.compt">
+      <small class="text-danger" [class.d-none]="key.valid || key.untouched">Competitor name is required.</small>
+    </div>
+    
+    <div class="form-group">
+      <textarea class="form-control" rows="5" required #usp="ngModel" placeholder="What is your USP over your competitor?" id="ques3" name="usp" [class.is-invalid]="usp.invalid && usp.touched" [(ngModel)]="userModel.usp"></textarea>
+      <small class="text-danger" [class.d-none]="usp.valid || usp.untouched">USP is required</small>
+    </div>
+    </div>
+    <button [disabled]="userForm.form.invalid" id="bform" class="btn btn-primary" type="submit">SUBMIT</button>
+    </form>
+    
+    </div>
+  
+    <div id="recorded" *ngIf="submitFlag">
+      <img src="../assets/5_1__shot.gif"><br><br>
+      Your application has been recorded.
+      <button id="homeb" (click) = "goToHome()">Home</button>
+    </div>
